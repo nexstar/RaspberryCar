@@ -14,11 +14,11 @@ $ g++ facedetect.cpp -o facedetect `pkg-config --libs opencv`
 $./facedetect
 ```
 compiler python
-```python
+``` .py
 $ cd ~/opencv/opencv/samples/python2
 $ sudo pip install imutils
 $ cp RaspberryCar/opencv/face_detect.py .
-$python face_detect.py
+$ python face_detect.py
 ```
 
 
