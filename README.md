@@ -7,7 +7,7 @@ raspberry pi3 B
 OS:Lubuntu 15.10
 
 ### Install Ubuntu
-Ref:\
+Ref:
 https://hackpad.com/ep/pad/static/CqbXLbtxEKg
 ### Opencv
 ```sh
