@@ -1,11 +1,13 @@
 ## RaspberryCar
 ### Environment
-raspberry pi2 B 
+#### Hardware:
+raspberry pi2 B\
 raspberry pi3 B
+#### Software:
 OS:Lubuntu 15.10
 
 ### Install Ubuntu
-Ref:
+Ref:\
 https://hackpad.com/ep/pad/static/CqbXLbtxEKg
 ### Opencv
 ```sh
