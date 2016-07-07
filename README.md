@@ -1,5 +1,7 @@
 ## RaspberryCar
-
+### Install Ubuntu
+Ref:
+https://hackpad.com/ep/pad/static/CqbXLbtxEKg
 ### Opencv
 ```sh
 $ git clone https://github.com/nexstar/RaspberryCar.git
@@ -20,6 +22,5 @@ $ sudo pip install imutils
 $ cp RaspberryCar/opencv/face_detect.py .
 $ python face_detect.py
 ```
-
 
 
