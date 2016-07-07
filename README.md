@@ -1,8 +1,8 @@
 ## RaspberryCar
 ### Environment
 #### Hardware:
-raspberry pi2 B<br \>
-raspberry pi3 B
+Raspberry pi2 B<br \>
+Raspberry pi3 B
 #### Software:
 OS:Lubuntu 15.10
 
