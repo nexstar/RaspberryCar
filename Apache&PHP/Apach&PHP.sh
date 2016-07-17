@@ -6,7 +6,7 @@ sudo apt-get install apache2 -y
 
 echo "Create html like test.html"
 cd /var/www/html && echo "<html> <p>123</p> <html/>" >> test.html
-firefox http://127.0.0.1/test.html
+
 
 echo "******install-PHP******"
 sudo apt-get install php5 libapache2-mod-php5 -y
@@ -15,7 +15,6 @@ echo "write info.php"
 echo "<?php phpinfo(); ?>" >> info.php
 sudo chown www-data:www-data /var/www/html/info.php
 echo "http://127.0.0.1/info.php if you finish."
-firefox http://127.0.0.1/info.php
 
 #echo "*****Get MySQL********"
 #sudo apt-cache search php5 -y
@@ -27,4 +26,10 @@ echo "***Write Video******"
 sudo apt-get install git -y
 git clone https://github.com/nexstar/RaspberryCar.git 
 cp ~/RaspberryCar/Apache&PHP/Video.html .
-firefox http://127.0.0.1/Video.html
+
+echo "run under three websit if you Finsh above."
+echo "1.firefox http://127.0.0.1/test.html"
+echo "2.firefox http://127.0.0.1/info.php"
+echo "3.firefox http://127.0.0.1/Video.html"
+
+
