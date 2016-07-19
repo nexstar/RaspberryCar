@@ -1,20 +1,19 @@
 #! /bin/bash
 #aothor:Nianbao
 
+echo "input user"
+read user
+
 echo "******install-Apache******"
 sudo apt-get install apache2 -y
-
 echo "Create html like test.html"
+sudo chown -R $user:$user /var/www/
 cd /var/www/html && echo "<html> <p>123</p> <html/>" >> test.html
-
 
 echo "******install-PHP******"
 sudo apt-get install php5 libapache2-mod-php5 -y
 systemctl restart apache2
-echo "write info.php"
 echo "<?php phpinfo(); ?>" >> info.php
-sudo chown www-data:www-data /var/www/html/info.php
-echo "http://127.0.0.1/info.php if you finish."
 
 #echo "*****Get MySQL********"
 #sudo apt-cache search php5 -y
@@ -24,12 +23,14 @@ echo "http://127.0.0.1/info.php if you finish."
 #sudo systemctl restart apache2
 echo "***Write Video******"
 sudo apt-get install git -y
-git clone https://github.com/nexstar/RaspberryCar.git 
-cp ~/RaspberryCar/Apache&PHP/Video.html .
+#git clone https://github.com/nexstar/RaspberryCar.git
+cd $HOME
+sudo cp ~/RaspberryCar/Apache\&PHP/Video.html /var/www/html/
 
-echo "run under three websit if you Finsh above."
-echo "1.firefox http://127.0.0.1/test.html"
-echo "2.firefox http://127.0.0.1/info.php"
-echo "3.firefox http://127.0.0.1/Video.html"
+echo "Check apache, html, php and video, if have problem can try more browser."
+echo "Check apache please input http://127.0.0.1/"
+echo "Check html please input http://127.0.0.1/test.html "
+echo "Check php please input http://127.0.0.1/info.php"
+echo "Check video please input http://127.0.0.1/Video.html"
 
 
