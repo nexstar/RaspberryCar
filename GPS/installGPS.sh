@@ -14,20 +14,25 @@ sudo apt-get install libspeechd-dev libxml2-dev ttf-liberation -y
 echo "**********Install--FINISH*************"
 
 echo "Write core_freq=250 and enable_uart=1 in sudo vim /boot/config.txt"
+cp /boot/config.txt /boot/config.txt_b
+sudo echo "core_freq=250 and enable_uart=1" >> /boot/config.txt
 
 echo "Change in 'sudo vim /boot/cmdline.txt'"
 echo "Change ' dwc_otg.lpm_enable=0  console=tty1 root=/dev/mmcblk0p7 rootfstype=ext4  elevator=deadline fsck.repair=yes rootwait'"
+cp /boot/cmdline.txt /boot/cmdline.txt_b
+sudo echo "core_freq=250 and enable_uart=1dwc_otg.lpm_enable=0  console=tty1 root=/dev/mmcblk0p7 rootfstype=ext4  elevator=deadline fsck.repair=yes rootwait" >> /boot/cmdline.txt
+
+
 
 echo "RUN below 1234"
+below 1234
 echo "1.sudo systemctl stop serial-getty@ttyS0.service"
+sudo systemctl stop serial-getty@ttyS0.service
 echo "2.sudo systemctl disable serial-getty@ttyS0.service"
+sudo systemctl disable serial-getty@ttyS0.service
 echo "3.sudo systemctl stop gpsd.socket"
+sudo systemctl stop gpsd.socket
 echo "4.sudo systemctl disable gpsd.socket"
-
+sudo systemctl disable gpsd.socket
 echo "reboot if you above finish"
-
-echo "sudo killall gpsd if you used gpsd"
-echo "start: sudo gpsd /dev/ttyS0 -F /var/run/gpsd.sock"
-
-echo "choose channel cat /dev/ttyS0 or gpsmon /dev/ttyS0 or with sudo cgps -s"
-
+#sudo reboot
