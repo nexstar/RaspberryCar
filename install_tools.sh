@@ -7,7 +7,9 @@ sudo apt-get install make -y
 sudo apt-get install ssh -y
 sudo apt-get install vim -y
 sudo apt-get install git -y
-sudo apt-get install ctags -y
+#sudo apt-get install ctags -y
+#gnome-open
+sudo apt-get install libgnome2-bin -y
 
 echo ***install vimrc***
 cd $HOME
