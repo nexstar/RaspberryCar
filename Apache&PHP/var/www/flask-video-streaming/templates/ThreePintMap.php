@@ -19,8 +19,8 @@
 <script type="text/javascript">
 
     		function myFunction() {
-			    location.href = 'CamMap.php';
-			}
+				window.location = 'http://10.42.0.82:5000/';
+	}
 			
 function load() {
 
