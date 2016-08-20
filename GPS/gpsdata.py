@@ -29,12 +29,13 @@ if __name__ == '__main__':
   gpsp = GpsPoller() # create the thread
   try:
     gpsp.start() # start it up
-    f=open("data.csv","w")
-    f.write("name,latitude,longitude\n")
+    #f=open("data.txt","w+")
+    #f.write("name,latitude,longitude\n")
     while True:
+      f=open("data.txt","w+")
       #It may take a second or two to get good data
       #print gpsd.fix.latitude,', ',gpsd.fix.longitude,'  Time: ',gpsd.utc
- 
+
       os.system('clear')
  
       print
@@ -54,14 +55,16 @@ if __name__ == '__main__':
       print 'mode        ' , gpsd.fix.mode
       print
       print 'sats        ' , gpsd.satellites
-      s=str(gpsd.utc)+","+str(float(gpsd.fix.latitude))+","+str(float(gpsd.fix.longitude))+"\n"
+      #s=str(gpsd.utc)+","+str(float(gpsd.fix.latitude))+","+str(float(gpsd.fix.longitude))+"\n"
+      s=str(float(gpsd.fix.latitude))+" "+str(float(gpsd.fix.longitude))+"\n"
       f.write(s)
 
       time.sleep(5) #set to whatever
- 
+      f.close()
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
     f.close()
     print "\nKilling Thread..."
     gpsp.running = False
     gpsp.join() # wait for the thread to finish what it's doing
   print "Done.\nExiting."
+
