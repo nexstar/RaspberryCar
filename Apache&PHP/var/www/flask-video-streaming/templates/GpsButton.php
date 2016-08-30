@@ -7,6 +7,13 @@ $Latitude = 121.26703;
 <title>GpsButton</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+    		
+    		function myFunction() {
+			    location.href = 'ThreePintMap.php';
+			}
+
+    </script>
 <style type="text/css">
 	
 
@@ -58,8 +65,8 @@ $Latitude = 121.26703;
 </head>
 <body>
 	<div>
-		<button id="GPS">GPS</button>
-		<div id="XXX">
+		<button id = "GPS">GPS</button>
+		<div id ="XXX">
 			<table>
 				<tr>
 			    	<th>Longitude</th>
@@ -70,7 +77,10 @@ $Latitude = 121.26703;
 					<td><?php echo $Latitude?></td>
 				</tr>
 			</table>
-			<button id="sent"<?php echo (isset($_GET['YN'])==1)? "":"disabled";?> >Get it</button>
+
+			
+<button id="sent" onclick="myFunction()" <?php echo (isset($_GET['YN'])==1)? "":"disabled";?> >Get it</button>
+			
 		</div>
 	</div>
 </body>
