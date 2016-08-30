@@ -14,7 +14,7 @@ app = Flask(__name__)
 def index():
     """Video streaming home page."""
     #return render_template('index.html')
-    return render_template('CamMap.html')
+    return render_template('CamMap.php')
 
 
 def gen(camera):
