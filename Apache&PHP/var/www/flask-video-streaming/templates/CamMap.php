@@ -171,8 +171,7 @@
  
 <body>
 	<div id = "camera">
-		<!--<label>no signal..</label>-->
-		<img src="{{ url_for('video_feed') }}">
+		<!--<img src="{{ url_for('video_feed') }}">-->
 	</div>
 	<div id = "map"></div>
 	
