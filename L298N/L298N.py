@@ -141,9 +141,6 @@ def Event_111():
 	
 """-------------------------"""
 def Car_Main():
-	Event_110()
-	
-	""""
 	ans = "---"
 	while True:    
 		
@@ -180,7 +177,7 @@ def Car_Main():
 			ans = 111		
 		time.sleep( Ultrasound_time_sleep )
 		print( ans,distance_L , distance_M , distance_R)
-	"""
+	
 		
 Initial_Motor_Code () 
 Initial_Ultrasound_Code ()	
