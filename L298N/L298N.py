@@ -19,7 +19,7 @@ gpio_TRIGGER = 32
 gpio_ECHO_L = 36 
 gpio_ECHO_M = 38 
 gpio_ECHO_R = 40 
-Ultrasound_time_sleep = 0.5
+Ultrasound_time_sleep = 0.2
 distance_L = 0
 distance_M = 0
 distance_R = 0
@@ -145,7 +145,7 @@ def Car_Main():
 	ans = "---"
 	
 	while True:    
-		"""
+		
 		distance_L = distance(gpio_ECHO_L)
 		time.sleep(0.2)
 		distance_M = distance(gpio_ECHO_M)
@@ -176,11 +176,9 @@ def Car_Main():
 			ans = 110
 		elif distance_L <=Safe_value and distance_M <=Safe_value and distance_R <=Safe_value :
 			Event_111()
-			ans = 111
-		
+			ans = 111		
 		time.sleep( Ultrasound_time_sleep )
-		print( ans,distance_L , distance_M , distance_R)"""
-		Forward ()
+		print( ans,distance_L , distance_M , distance_R)
 		
 		
 Car_Main()	
