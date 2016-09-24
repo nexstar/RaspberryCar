@@ -139,11 +139,10 @@ def Event_111():
 	
 """-------------------------"""
 def Car_Main():
-
-	Initial_Motor_Code () 
-	Initial_Ultrasound_Code ()	
-	ans = "---"
+	Event_110()
 	
+	""""
+	ans = "---"
 	while True:    
 		
 		distance_L = distance(gpio_ECHO_L)
@@ -179,7 +178,10 @@ def Car_Main():
 			ans = 111		
 		time.sleep( Ultrasound_time_sleep )
 		print( ans,distance_L , distance_M , distance_R)
+	"""
 		
-		
-Car_Main()	
+Initial_Motor_Code () 
+Initial_Ultrasound_Code ()	
+while True:  
+	Car_Main()	
 
