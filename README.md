@@ -50,7 +50,7 @@ interface=wlan0
 dhcp-range=192.168.10.2,192.168.10.10,12h 
 //ip range can't be use and need same class c ，12h=every 12hour change ip
 $sudo systemctl restart dnsmasq
-$#hostapd
+#hostapd
 $sudo apt-get install hostapd
 $sudo vi  /etc/hostapd/hostapd.conf
 interface=wlan0
@@ -71,5 +71,11 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 $sudo hostapd -dd /etc/hostapd/hostapd.conf
 $sudo update-rc.d hostapd defaults //set auto start, in every boot
 $reboot
+
+Ref
+http://blog.itist.tw/2016/03/using-raspberry-pi-3-as-wifi-ap-with-raspbian-jessie.html
+http://blog.yam.com/cistychang/article/61517499
+http://chaoyunotebook.blogspot.tw/2015/10/raspberry-pi-wifi-ap.html
+
 ```
 
