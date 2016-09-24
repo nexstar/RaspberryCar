@@ -30,7 +30,7 @@ $ cp RaspberryCar/opencv/face_detect.py .
 $ python face_detect.py
 ```
 Set wifi ap for pi3
-
+wifi ap and wifi one from two
 ``` wifi
 $sudo apt-get install iw -y
 $iw list //check wifi device whether AP function
