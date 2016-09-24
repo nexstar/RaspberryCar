@@ -14,7 +14,7 @@ Motor_A_1 = 15
 Motor_A_2 = 16
 Motor_B_1 = 19
 Motor_B_2 = 21
-Motor_time_sleep = 0.5
+Motor_time_sleep = 1
 gpio_TRIGGER = 32
 gpio_ECHO_L = 36 
 gpio_ECHO_M = 38 
@@ -48,7 +48,7 @@ def Initial_Ultrasound_Code () :
 
 def distance(gpio_ECHO):
     gpio.output(gpio_TRIGGER, True)# set Trigger High
-    time.sleep(0.00001)# set Trigger after 0.1ms low
+    time.sleep(0.0001)# set Trigger after 0.1ms low
     gpio.output(gpio_TRIGGER, False)
     startTime = time.time()
     endTime = time.time()
@@ -56,7 +56,7 @@ def distance(gpio_ECHO):
 		startTime = time.time()		
     while gpio.input(gpio_ECHO) == 1: # store arrival
 		endTime = time.time()	
-    distance = ((endTime - startTime) * 17150) #34300) / 2 # multiply with speed of sound (34300 cm/s)	
+    distance = ((endTime - startTime) * 34300) / 2 # multiply with speed of sound (34300 cm/s)	
     return ( distance ) # and division by two
 """-------------------------"""
 
@@ -141,14 +141,13 @@ def Car_Main():
 	ans = "---"
 	
 	while True:    
-		""""
+		"""
 		distance_L = distance(gpio_ECHO_L)
 		time.sleep(0.2)
 		distance_M = distance(gpio_ECHO_M)
 		time.sleep(0.2)
 		distance_R = distance(gpio_ECHO_R)
-		time.sleep(0.2)
-		
+		time.sleep(0.2)	
 		
 		if distance_L >Safe_value and distance_M >Safe_value and distance_R >Safe_value :
 			Event_000()
@@ -174,9 +173,9 @@ def Car_Main():
 		elif distance_L <=Safe_value and distance_M <=Safe_value and distance_R <=Safe_value :
 			Event_111()
 			ans = 111
-		"""
+		
 		time.sleep( Ultrasound_time_sleep )
-		print( ans,distance_L , distance_M , distance_R)
+		print( ans,distance_L , distance_M , distance_R)"""
 		Forward ()
 		
 		
