@@ -23,7 +23,7 @@ Ultrasound_time_sleep = 0.2
 distance_L = 0
 distance_M = 0
 distance_R = 0
-Safe_value = 50
+Safe_value = 5
 Dangerous_values = 50
 """------------Pin_Setup Global Variables-------------"""
 
@@ -142,8 +142,7 @@ def Event_111():
 """-------------------------"""
 def Car_Main():
 	ans = "---"
-	while True:    
-		
+	while True:  
 		distance_L = distance(gpio_ECHO_L)
 		time.sleep(0.2)
 		distance_M = distance(gpio_ECHO_M)
@@ -177,7 +176,7 @@ def Car_Main():
 			ans = 111		
 		time.sleep( Ultrasound_time_sleep )
 		print( ans,distance_L , distance_M , distance_R)
-	
+
 		
 Initial_Motor_Code () 
 Initial_Ultrasound_Code ()	
