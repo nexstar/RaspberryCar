@@ -36,6 +36,8 @@ def Initial_Motor_Code () :
 	gpio.setup(Motor_A_2, gpio.OUT) 
 	gpio.setup(Motor_B_1, gpio.OUT)#is B Motor	
 	gpio.setup(Motor_B_2, gpio.OUT)  
+	gpio.output(Motor_A, True)		
+	gpio.output(Motor_B, True)
 	"""-------------------------"""
 	
 def Initial_Ultrasound_Code () :	
