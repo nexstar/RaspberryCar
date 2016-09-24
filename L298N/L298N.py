@@ -66,6 +66,7 @@ def Forward () :
 	gpio.output(Motor_A_2, True)
 	gpio.output(Motor_B_1, True)
 	gpio.output(Motor_B_2,  False)
+	print("Forward")
 	time.sleep(Motor_time_sleep)
 	
 def Backward () :  
@@ -73,6 +74,7 @@ def Backward () :
 	gpio.output(Motor_A_2, False)
 	gpio.output(Motor_B_1, False)
 	gpio.output(Motor_B_2, True)
+	print("Backward")
 	time.sleep(Motor_time_sleep)
 	
 def Right () : 
@@ -80,6 +82,7 @@ def Right () :
 	gpio.output(Motor_A_2,  False)
 	gpio.output(Motor_B_1, True)
 	gpio.output(Motor_B_2,  False)
+	print("Right")
 	time.sleep(Motor_time_sleep)
 	
 def Left () : 
@@ -87,6 +90,7 @@ def Left () :
 	gpio.output(Motor_A_2, True)
 	gpio.output(Motor_B_1, False)
 	gpio.output(Motor_B_2,  True)
+	print("Left")
 	time.sleep(Motor_time_sleep)
 	
 """-------------------------"""
