@@ -11,12 +11,17 @@ sudo apt-get install ctags -y
 #gnome-open
 sudo apt-get install libgnome2-bin -y
 
-echo ***install vimrc***
+echo "---Install vim && setting vimrc"
 cd $HOME
-cp .vim vim_old
 git clone https://github.com/drose11244/vim.git
-cp -r vim .vim
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cp -r .vim/.vimrc ~/.vimrc
 
+if [ -e $HOME/.vim]; then
+	mv .vim vim_old
+	mv vim .vim
+else
+	mv vim .vim
+fi
+bash $HOME/.vim/install_vim.sh
 
+cd $HOME
+echo "see Readme"
